@@ -18,3 +18,6 @@ The bot is up and running [here](https://t.me/gdrivemirror_bot)
 - Run command `python bot.py`
 - Complete the authentication to generate auth-token.
 
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
