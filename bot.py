@@ -135,9 +135,9 @@ def start_bot(bot, update):
                     dwnld_url = upload.upload(raw_file)
                     sent_message.edit_text(Text.DONE.format(raw_file, size, dwnld_url),parse_mode=telegram.ParseMode.HTML)
                     os.remove(raw_file)
-                    else:
+        else:
                     sent_message.edit_text(Text.MAXLIMITEXCEEDED)
-            else:
+        else:
                 sent_message.edit_text(Text.ISNOT_DOWNLOADABLE,parse_mode=telegram.ParseMode.HTML)
     elif("help" not in url and "start" not in url and "broadcast" not in url and "donate" not in url and "add_user" not in url and "revoke_user" not in url):
         bot.send_chat_action(chat_id=update.message.chat_id, action=telegram.ChatAction.TYPING)
