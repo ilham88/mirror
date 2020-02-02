@@ -134,8 +134,8 @@ def start_bot(bot, update):
 					sent_message.edit_text(Text.UPLOADING_GD)
 					dwnld_url = upload.upload(raw_file)
 					sent_message.edit_text(Text.DONE.format(raw_file, size, dwnld_url),parse_mode=telegram.ParseMode.HTML)
-			 		os.remove(raw_file)
-				else:
+					os.remove(raw_file)
+					else:
 					sent_message.edit_text(Text.MAXLIMITEXCEEDED)
 			else:
 				sent_message.edit_text(Text.ISNOT_DOWNLOADABLE,parse_mode=telegram.ParseMode.HTML)
